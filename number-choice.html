@@ -1,0 +1,19 @@
+
+<h2>Number Choice Game</h2>
+<input type="number" id="numberChoice" placeholder="আপনার নাম্বার দিন">
+<button onclick="checkNumberChoice()">Submit</button>
+<p id="result"></p>
+
+<script src="js/config.js"></script>
+<script>
+function checkNumberChoice() {
+    const number = parseInt(document.getElementById('numberChoice').value);
+    const result = document.getElementById('result');
+    
+    if(number == telegramControl.todayNumberChoice) {
+        result.innerText = "সঠিক! 🎉 (ডেমো)";
+    } else {
+        result.innerText = "ভুল! ❌";
+    }
+}
+</script>
